@@ -1,13 +1,22 @@
 <?php
 
-$host = 'localhost';
-$user = '';
-$pass = '';
-$data = '';
+$host = 'cudb.wrlc.org';
+$user = 'uptime';
+$pass = '2LcVpuZqRshGCDUV';
+$data = 'uptime';
 $sSetting['refresh'] = "10000";
 
-mysql_connect($host, $user, $pass) or die(mysql_error());
-mysql_select_db($data) or die(mysql_error());
+try
+{
+$conn = new PDO("mysql:host=".$host.";dbname=".$data, $user, $pass);
+}
+catch(PDOException $pe)
+{
+die('Could not connect to the database because: ' .$pe->getMessage());
+}
+
+
+//mysql_select_db($data) or die(mysql_error());
 //Template options: "default" and "dark"
 $template = "./templates/default/";
 $index = $template . "index.php";

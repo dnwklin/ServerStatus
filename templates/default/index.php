@@ -32,8 +32,8 @@
 				<th id="location">Location</th>
 				<th id="uptime">Uptime</th>
 				<th id="load">Load</th>
-				<th id="ram">RAM</th>
-				<th id="hdd">HDD</th>
+				<th id="ram">RAM Free</th>
+				<th id="hdd">HDD Free</th>
 			</tr>
 			</thead>
 			<tbody>
